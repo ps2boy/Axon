@@ -40,7 +40,7 @@ DWORD WINAPI input(PVOID lvpParameter)
 	HANDLE hPipe;
 	char buffer[999999];
 	DWORD dwRead;
-	hPipe = CreateNamedPipe(TEXT("\\\\.\\pipe\\Axon"),
+	hPipe = CreateNamedPipe(TEXT("\\\\.\\pipe\\AquaHack"),
 		PIPE_ACCESS_DUPLEX | PIPE_TYPE_BYTE | PIPE_READMODE_BYTE,
 		PIPE_WAIT,
 		1,
@@ -201,8 +201,6 @@ void main()
 	lua_newtable(m_L);
 	lua_setglobal(m_L, "_G");
 	CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)input, NULL, NULL, NULL);
-	printf("RVX INJECTED!\n");
-	MessageBoxA(NULL, "Africanus is better than you\nKai fucked me on my house :D\nAero is Gay\nSettings bombed a school\n<Aspect> bditt is less gay than Pudding Mug\nxGladius is less gay than Kai but still true gay love\nTrapFX is a weeb", "The Truth", MB_OK);
 }
 
 
