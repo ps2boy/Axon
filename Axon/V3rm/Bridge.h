@@ -291,7 +291,7 @@ namespace Bridge
 			r_lua_pushcclosure(m_rL, Bridge::int3breakpoints[1], 1);
 			return -1;
 		case LUA_ERRRUN:
-				printf("RVX ROBLOX ERROR: %s\n", lua_tostring(L, -1));
+				printf("Error: %s\n", lua_tostring(L, -1));
 				return -1;
 		default: break;
 		}
